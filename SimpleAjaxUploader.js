@@ -1846,7 +1846,6 @@ ss.DragAndDrop = {
         });
 
         elem.ondragenter = function( e ) {
-            e.stopPropagation();
             e.preventDefault();
 
             if ( !self._dragFileCheck( e ) ) {
@@ -1858,7 +1857,6 @@ ss.DragAndDrop = {
         };
 
         elem.ondragover = function( e ) {
-            e.stopPropagation();
             e.preventDefault();
             return false;
         };
@@ -1874,7 +1872,6 @@ ss.DragAndDrop = {
         };
 
         elem.ondrop = function( e ) {
-            e.stopPropagation();
             e.preventDefault();
 
             ss.removeClass( this, self._opts.dragClass );
